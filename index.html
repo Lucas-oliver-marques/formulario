@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-check-input:checked {
+            background-color: green !important;
+        }
+    </style>
+    <title>Solicitação de Férias</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="text-center">Solicitação de Férias</h2>
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputColaborador">Colaborador</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="inputColaborador" placeholder="Nome Completo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputData">Data</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="inputData">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputDepartamento">Departamento</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-building"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="inputDepartamento" placeholder="DAP - Depto. Administrativo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputCentroCusto">Centro de Custo</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="inputCentroCusto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Período Aquisitivo</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputInicioAquisitivo">Início</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="inputInicioAquisitivo">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputFimAquisitivo">Fim</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="inputFimAquisitivo">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputDiasSaldo">Dias de Saldo</label>
+                                <input type="text" class="form-control" id="inputDiasSaldo" placeholder="30 Dias" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputLimite">Limite</label>
+                                <input type="text" class="form-control" id="inputLimite" placeholder="05/01/2025" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>Início das Férias</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputInicioFerias">Início</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="inputInicioFerias">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputDiasFerias">Dias de Férias</label>
+                                <input type="text" class="form-control" id="inputDiasFerias" placeholder="30 Dias">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputFinalFerias">Final das Férias</label>
+                                <div class="input-group">
+                                    <input type="date" class="form-control" id="inputFinalFerias">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="inputAbono">Abono</label>
+                                <input type="text" class="form-control" id="inputAbono" placeholder="0" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputParc13Salario">1° Parc. do 13° Salário</label>
+                                <div class="input-group">
+                                    <div class="form-check mr-2">
+                                        <input class="form-check-input" type="radio" name="radioParc13" id="radioSim" value="sim">
+                                        <label class="form-check-label" for="radioSim">Sim</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radioParc13" id="radioNao" value="nao">
+                                        <label class="form-check-label" for="radioNao">Não</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-file-invoice-dollar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>AVISO:</strong> Entregue a Carteira de Trabalho e Previdência Social do funcionário na Adm. de Pessoal para anotações de férias.
+                    </div>
+                    <button type="submit" class="btn btn-primary float-right">Solicitar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
